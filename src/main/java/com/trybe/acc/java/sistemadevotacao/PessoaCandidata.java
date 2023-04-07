@@ -39,6 +39,8 @@ public class PessoaCandidata extends Pessoa {
   }
 
   /**
+   * Inserir votos da pessoa candidata.
+   * 
    * @param votos Colocar numero de votos da pessoa.
    */
   private void setVotos(int votos) {

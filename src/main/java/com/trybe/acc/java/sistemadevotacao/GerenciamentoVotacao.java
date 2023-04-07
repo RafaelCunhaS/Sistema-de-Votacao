@@ -55,7 +55,7 @@ public class GerenciamentoVotacao {
   }
 
   /**
-   * Voto de uma pessoa eleitora para uma pessoa candidata
+   * Voto de uma pessoa eleitora para uma pessoa candidata.
    * 
    * @param cpfPessoaEleitora Cpf para validar voto.
    * @param numeroPessoaCandidata Numero para voto.
