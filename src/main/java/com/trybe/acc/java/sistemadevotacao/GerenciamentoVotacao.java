@@ -10,6 +10,10 @@ public class GerenciamentoVotacao {
   private Set<String> cpfComputado = new HashSet<String>();
   private int totalVotos;
 
+  /**
+   * @param nome Nome da pessoa candidata.
+   * @param numero Numero da pessoa candidata.
+   */
   public void cadastrarPessoaCandidata(String nome, int numero) {
     PessoaCandidata pessoa = new PessoaCandidata(nome, numero);
     boolean verificaCadastro = false;
@@ -19,12 +23,17 @@ public class GerenciamentoVotacao {
         break;
       }
     }
-    if (verificaCadastro)
+    if (verificaCadastro) {
       System.out.println("Número pessoa candidata já utilizado!");
-    else
+    } else {
       pessoasCandidatas.add(pessoa);
+    }
   }
 
+  /**
+   * @param nome Nome da pessoa eleitora.
+   * @param cpf Cpf da pessoa eleitora.
+   */
   public void cadastrarPessoaEleitora(String nome, String cpf) {
     PessoaEleitora pessoa = new PessoaEleitora(nome, cpf);
     boolean verificaCadastro = false;
@@ -34,12 +43,17 @@ public class GerenciamentoVotacao {
         break;
       }
     }
-    if (verificaCadastro)
+    if (verificaCadastro) {
       System.out.println("Pessoa eleitora já cadastrada!");
-    else
+    } else {
       pessoasEleitoras.add(pessoa);
+    }
   }
 
+  /**
+   * @param cpfPessoaEleitora Cpf para validar voto.
+   * @param numeroPessoaCandidata Numero para voto.
+   */
   public void votar(String cpfPessoaEleitora, int numeroPessoaCandidata) {
     if (cpfComputado.contains(cpfPessoaEleitora)) {
       System.out.println("Pessoa eleitora já votou!");
@@ -70,6 +84,10 @@ public class GerenciamentoVotacao {
     }
   }
 
+  /**
+   * @param indice Indice da pessoa candidata na lista pessoasCandidatas.
+   * @return Porcentagem de votos.
+   */
   private double calcularPorcentagemVotos(int indice) {
     double porcentagemVotos = (double) pessoasCandidatas.get(indice).getVotos() * 100 / totalVotos;
     return Math.round(porcentagemVotos);

@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Principal {
 
+  /**
+   * @param args Não utilizado.
+   */
   public static void main(String[] args) {
     // TODO Auto-generated method stub
     Scanner scan = new Scanner(System.in);
