@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Principal {
 
   /**
+   * Método principal do projeto.
+   * 
    * @param args Não utilizado.
    */
   public static void main(String[] args) {

@@ -11,6 +11,8 @@ public class GerenciamentoVotacao {
   private int totalVotos;
 
   /**
+   * Cadastrto de pessoa candidata.
+   * 
    * @param nome Nome da pessoa candidata.
    * @param numero Numero da pessoa candidata.
    */
@@ -31,6 +33,8 @@ public class GerenciamentoVotacao {
   }
 
   /**
+   * Cadastro de pessoa eleitora.
+   * 
    * @param nome Nome da pessoa eleitora.
    * @param cpf Cpf da pessoa eleitora.
    */
@@ -51,6 +55,8 @@ public class GerenciamentoVotacao {
   }
 
   /**
+   * Voto de uma pessoa eleitora para uma pessoa candidata
+   * 
    * @param cpfPessoaEleitora Cpf para validar voto.
    * @param numeroPessoaCandidata Numero para voto.
    */
@@ -68,6 +74,9 @@ public class GerenciamentoVotacao {
     }
   }
 
+  /**
+   * Mostra resultado da votação.
+   */
   public void mostrarResultado() {
     if (cpfComputado.isEmpty()) {
       System.out.println("É preciso ter pelo menos um voto para mostrar o resultado.");
@@ -85,6 +94,8 @@ public class GerenciamentoVotacao {
   }
 
   /**
+   * Calcula e retorna porcentagem total dos votos.
+   * 
    * @param indice Indice da pessoa candidata na lista pessoasCandidatas.
    * @return Porcentagem de votos.
    */

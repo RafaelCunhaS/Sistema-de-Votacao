@@ -4,6 +4,12 @@ public class PessoaCandidata extends Pessoa {
   private int numero;
   private int votos;
 
+  /**
+   * Construtor.
+   * 
+   * @param nome Nome da pessoa candidata.
+   * @param numero Numero da pessoa candidata.
+   */
   public PessoaCandidata(String nome, int numero) {
     this.setNome(nome);
     this.setNumero(numero);
